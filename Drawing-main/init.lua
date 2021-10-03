@@ -1,8 +1,6 @@
 
 --// Main Object 
-local painter = {
-    Drawings = {}
-}
+local painter = {}
 
 --// Constants 
 local sketch = Drawing
@@ -16,8 +14,6 @@ function painter:paint(name,properties)
     for index,value in next,properties do 
         painting[index] = value 
     end 
-    
-    table.insert(painter.Drawings,painting)
 
     return painting
 end 
