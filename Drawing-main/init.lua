@@ -36,7 +36,7 @@ end
 
 function painter:MouseOnDrawing(Drawing)
 
-    if Drawing.Transparency > 0 and (Mouse.X >= Drawing.Position.X and Mouse.X <= Drawing.Position.X + Drawing.Size.X) and (Mouse.Y + 36 >= Drawing.Position.Y and Mouse.Y + 36 <= Drawing.Position.Y + Drawing.Size.Y) then 
+    if Drawing.Visible and (Mouse.X >= Drawing.Position.X and Mouse.X <= Drawing.Position.X + Drawing.Size.X) and (Mouse.Y + 36 >= Drawing.Position.Y and Mouse.Y + 36 <= Drawing.Position.Y + Drawing.Size.Y) then 
         return true 
     end 
 
@@ -46,7 +46,7 @@ end
 
 function painter:DrawingOnDrawing(Drawing1, Drawing)
 
-    if Drawing.Transparency > 0 and (Drawing1.Position.X >= Drawing.Position.X and Drawing1.Position.X <= Drawing.Position.X + Drawing.Size.X) and (Drawing1.Position.Y >= Drawing.Position.Y and Drawing1.Position.Y + Drawing1.Size.Y <= Drawing.Position.Y + Drawing.Size.Y) then 
+    if Drawing.Visible and (Drawing1.Position.X >= Drawing.Position.X and Drawing1.Position.X <= Drawing.Position.X + Drawing.Size.X) and (Drawing1.Position.Y >= Drawing.Position.Y and Drawing1.Position.Y + Drawing1.Size.Y <= Drawing.Position.Y + Drawing.Size.Y) then 
         return true 
     end 
 
