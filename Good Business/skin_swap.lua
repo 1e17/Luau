@@ -50,12 +50,12 @@ function skin_swap.set(gun,skin,current)
   weapons[not current and gun or menu.CurrentWeapon].Customization.Skin.Value = skin 
 end 
 
-local gunSwap = workspace.ChildAdded:Connect(function(child)
+local gunSwap = workspace.ChildAdded:Connect(pcall(function(child)
   if child:FindFirstChild('AnimationController') then 
     local skin = weapons[child.Name].Customization.Skin.Value
-    pcall(skin_swap.paint,skin_swap,skin,child)
+    skin_swap.paint,skin_swap,skin,child
   end
-end)
+end))
 
 function skin_swap.exit()
   gunSwap:Disconnect()
@@ -64,5 +64,5 @@ end
 return skin_swap
 
 --[[
-  If you use this give credit to Require please
+  If you use this give credit to Require pleaseZ
 ]]
