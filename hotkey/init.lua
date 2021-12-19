@@ -31,7 +31,7 @@ function hotkey.add(key, callback)
   return class 
 end 
 
-function hotkey.END()
+function hotkey.exit()
   connection:Disconnect()
 end
 
