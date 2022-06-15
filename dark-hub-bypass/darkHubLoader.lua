@@ -1,6 +1,6 @@
 local http = game:GetService('HttpService')
 
-local directory = 'https://raw.githubusercontent.com/RandomAdamYT/DarkHub/master/'
+local directory = 'https://raw.githubusercontent.com/1e17/Luau-Misc/main/DarkHubGames/'
 local games_ = http:JSONDecode(game:HttpGet(directory .. 'SupportedGames'))
 
 local games = {}
